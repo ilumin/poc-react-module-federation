@@ -1,7 +1,8 @@
 import { Link, Navigate, Route, Routes, useParams } from 'react-router-dom'
 
 import PropertyOverviewPage from './PropertyOverviewPage'
-import PropertyListingPage from './PropertyListingPage'
+
+import ListingRoutes from 'listing/Routes'
 
 function PropertyDetailPage() {
   const { propertyId } = useParams()
@@ -38,7 +39,7 @@ function PropertyDetailPage() {
       <Routes>
         <Route index element={<Navigate to="overview" />} />
         <Route path="/overview" element={<PropertyOverviewPage />} />
-        <Route path="/listing/*" element={<PropertyListingPage />} />
+        <Route path="/listing/*" element={<ListingRoutes />} />
       </Routes>
     </div>
   )
