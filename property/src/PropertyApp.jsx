@@ -6,9 +6,6 @@ function PropertyApp() {
   return (
     <div>
       <h1>Property App</h1>
-      <h2>
-        base route: <code>/property</code>
-      </h2>
       <BrowserRouter>
         <ul>
           <li>
