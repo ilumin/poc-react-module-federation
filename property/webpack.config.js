@@ -11,7 +11,7 @@ module.exports = {
     static: {
       directory: path.join(__dirname, 'dist'),
     },
-    port: 3000,
+    port: 3001,
     historyApiFallback: true,
     hot: 'only',
     headers: {
@@ -59,16 +59,16 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: 'shell',
+      name: 'property',
       filename: 'remoteEntry.js',
       remotes: {
         // order: 'order@http://localhost:3002/remoteEntry.js',
         // dashboard: 'dashboard@http://localhost:3001/remoteEntry.js',
-        property: 'property@http://localhost:3004/remoteEntry.js',
-        // shell: 'shell@http://localhost:3000/remoteEntry.js',
+        // profile: 'profile@http://localhost:3004/remoteEntry.js',
+        shell: 'shell@http://localhost:3000/remoteEntry.js',
       },
       exposes: {
-        './App': './src/App',
+        './Routes': './src/PropertyRoutes',
         // './Shell': './src/Shell',
         // './Service': './src/Service',
       },
