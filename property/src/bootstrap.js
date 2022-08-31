@@ -1,11 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-import App from './App';
+import PropertyApp from './PropertyApp'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <PropertyApp />
   </React.StrictMode>,
-  document.getElementById('root'),
-);
+  document.getElementById('root')
+)
