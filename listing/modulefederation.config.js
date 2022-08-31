@@ -1,9 +1,9 @@
-const { dependencies } = require('./package.json');
+const { dependencies } = require('./package.json')
 
 module.exports = {
   name: 'listing',
   exposes: {
-    // './Button': './src/Button',
+    './ListingRoutes': './src/ListingRoutes.jsx',
   },
   filename: 'remoteEntry.js',
   shared: {
@@ -17,4 +17,4 @@ module.exports = {
       requiredVersion: dependencies['react-dom'],
     },
   },
-};
+}

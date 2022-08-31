@@ -1,11 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-import App from './App';
+import ListingApp from './ListingApp'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ListingApp />
   </React.StrictMode>,
-  document.getElementById('root'),
-);
+  document.getElementById('root')
+)
