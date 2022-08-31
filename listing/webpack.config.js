@@ -11,7 +11,7 @@ module.exports = {
     static: {
       directory: path.join(__dirname, 'dist'),
     },
-    port: 3001,
+    port: 3002,
     historyApiFallback: true,
     hot: 'only',
     headers: {
@@ -59,14 +59,13 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: 'property',
+      name: 'listing',
       filename: 'remoteEntry.js',
       remotes: {
-        listing: 'listing@http://localhost:3002/remoteEntry.js',
         shell: 'shell@http://localhost:3000/remoteEntry.js',
       },
       exposes: {
-        './Routes': './src/PropertyRoutes',
+        './Routes': './src/ListingRoutes',
       },
       shared: [
         {
