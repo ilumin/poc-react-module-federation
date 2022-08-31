@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "shell",
+      "property",
+      "listing"
+    ]
+  },
+  "scripts": {
+    "start": "concurrently 'cd ./shell && yarn start' 'cd ./property && yarn start' 'cd ./listing && yarn start'",
+    "build": "concurrently 'cd ./shell && yarn build' 'cd ./property && yarn build' 'cd ./listing && yarn build'",
+    "serve": "concurrently 'cd ./shell && yarn serve' 'cd ./property && yarn serve' 'cd ./listing && yarn serve'",
+    "clean": "concurrently 'cd ./shell && yarn clean' 'cd ./property && yarn clean' 'cd ./listing && yarn clean'"
+  },
+  "devDependencies": {
+    "concurrently": "7.3.0"
+  }
+}
