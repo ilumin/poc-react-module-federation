@@ -82,6 +82,9 @@ module.exports = {
             singleton: true,
             requiredVersion: deps['react-dom'],
           },
+          'react-router-dom': {
+            singleton: true,
+          },
         },
         // Workaround explaination: https://www.youtube.com/watch?v=-LNcpralkjM&t=540
         // './src/Service',

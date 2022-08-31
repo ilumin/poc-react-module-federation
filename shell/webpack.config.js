@@ -62,10 +62,7 @@ module.exports = {
       name: 'shell',
       filename: 'remoteEntry.js',
       remotes: {
-        // order: 'order@http://localhost:3002/remoteEntry.js',
-        // dashboard: 'dashboard@http://localhost:3001/remoteEntry.js',
-        property: 'property@http://localhost:3004/remoteEntry.js',
-        // shell: 'shell@http://localhost:3000/remoteEntry.js',
+        property: 'property@http://localhost:3001/remoteEntry.js',
       },
       exposes: {
         './App': './src/App',
@@ -81,6 +78,9 @@ module.exports = {
           'react-dom': {
             singleton: true,
             requiredVersion: deps['react-dom'],
+          },
+          'react-router-dom': {
+            singleton: true,
           },
         },
         // Workaround explaination: https://www.youtube.com/watch?v=-LNcpralkjM&t=540

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
-import PropertyPage from './pages/PropertyPage'
+import PropertyRoutes from 'property/Routes'
 
 const App = () => (
   <div>
@@ -31,7 +31,7 @@ const App = () => (
       </ul>
       <Routes>
         <Route index element={<>Main</>} />
-        <Route path="/properties/*" element={<PropertyPage />} />
+        <Route path="/properties/*" element={<PropertyRoutes />} />
       </Routes>
     </BrowserRouter>
   </div>
