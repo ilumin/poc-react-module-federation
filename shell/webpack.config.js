@@ -68,6 +68,7 @@ module.exports = {
         // shell: 'shell@http://localhost:3000/remoteEntry.js',
       },
       exposes: {
+        './App': './src/App',
         // './Shell': './src/Shell',
         // './Service': './src/Service',
       },
